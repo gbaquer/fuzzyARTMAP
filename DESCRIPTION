@@ -1,0 +1,11 @@
+Package: fuzzyARTMAP
+Type: Package
+Version: 1.0
+Title: Implementation of a fuzzy ARTMAP neural network
+Description: This package allows creation, training and testing of fuzzy ARTMAP neural networks.Adaptation of the original matlab package "Fuzzy ART and Fuzzy ARTMAP Neural Networks" by Aaron Garrett
+Date: 2016-01-08
+Author: Gerard Baquer Gómez
+Maintainer: Gerard Baquer Gómez <baquer.gomez@gmail.com>
+License: MIT
+LazyData: true
+RoxygenNote: 5.0.1
