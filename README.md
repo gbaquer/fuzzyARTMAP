@@ -1,0 +1,2 @@
+# fuzzyARTMAP
+fuzzyARTMAP R package
