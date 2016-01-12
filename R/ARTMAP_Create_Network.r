@@ -24,34 +24,34 @@ ARTMAP_Create_Network=function(numFeatures, numClasses,
                                maxNumCategories = 1000, vigilance=0.75, 
                                 bias=0.000001, numEpochs=100, learningRate=1.0)
 {
-if(is.null(numFeatures) || is.null(numClasses))
-{
-  stop('You must specify the number of features and the number of classes.');
-}
-
-# Check the ranges of the input parameters.
-numFeatures = round(numFeatures);
-if(numFeatures < 1)
-{
-  stop('The number of features must be a positive integer.');
-}
-numClasses = round(numClasses);
-if(numClasses < 2)
-{
-  stop('The number of classes must be a positive integer greater than 1.');
-}
-
-# Create and initialize the weight matrix.
-weight = matrix(1,numFeatures,0);
-
-# Create and initialize the map field.
-mapField = matrix(0,1,0);
-
-# Create the structure and return.
-artmap_network = list("numFeatures"= numFeatures, "numCategories" = 0, "maxNumCategories" = maxNumCategories, 
-                        "numClasses"=numClasses, "weight"=weight, "mapField"=mapField, 
-                        "vigilance"=vigilance, "bias"=bias, "numEpochs"=numEpochs, 
-                        "neededEpochs"=0,"learningRate"=learningRate);
-
-return(artmap_network);
+  if(is.null(numFeatures) || is.null(numClasses))
+  {
+    stop('You must specify the number of features and the number of classes.');
+  }
+  
+  # Check the ranges of the input parameters.
+  numFeatures = round(numFeatures);
+  if(numFeatures < 1)
+  {
+    stop('The number of features must be a positive integer.');
+  }
+  numClasses = round(numClasses);
+  if(numClasses < 2)
+  {
+    stop('The number of classes must be a positive integer greater than 1.');
+  }
+  
+  # Create and initialize the weight matrix.
+  weight = matrix(1,0,numFeatures);
+  
+  # Create and initialize the map field.
+  mapField = matrix(0,0,1);
+  
+  # Create the structure and return.
+  artmap_network = list("numFeatures"= numFeatures, "numCategories" = 0, "maxNumCategories" = maxNumCategories, 
+                          "numClasses"=numClasses, "weight"=weight, "mapField"=mapField, 
+                          "vigilance"=vigilance, "bias"=bias, "numEpochs"=numEpochs, 
+                          "neededEpochs"=0,"learningRate"=learningRate);
+  
+  return(artmap_network);
 }
